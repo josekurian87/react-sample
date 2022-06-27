@@ -4,11 +4,12 @@ import './style.css';
 export default function AddItem(props) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [posts, setPosts] = useState(props.posts);
 
-  function addItem(e) {
+  const addItem = (e) => {
     e.preventDefault();
-    props.posts;
-  }
+    setPosts(...posts, { id: 3, title: title, content: content });
+  };
 
   return (
     <div>
@@ -30,6 +31,7 @@ export default function AddItem(props) {
             onChange={(e) => setContent(e.target.value)}
           />
         </label>
+        <input type="submit" />
       </form>
     </div>
   );
