@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 export default function AddItem(props) {
@@ -10,6 +10,8 @@ export default function AddItem(props) {
     e.preventDefault();
     setPosts(...posts, { id: 3, title: title, content: content });
   };
+
+  useEffect(() => {}, posts);
 
   return (
     <div>

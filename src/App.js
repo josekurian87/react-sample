@@ -15,8 +15,8 @@ export default function App() {
 
   return (
     <div>
-      <ItemList posts={postsMock} />
-      <AddItem posts={postsMock} />
+      <ItemList posts={postsMock} updateStatus={false}/>
+      <AddItem posts={postsMock} updateStatus={false}/>
     </div>
   );
 }
